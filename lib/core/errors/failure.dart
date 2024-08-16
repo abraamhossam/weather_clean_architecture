@@ -12,7 +12,7 @@ class ServerFailure extends Failure {
   factory ServerFailure.fromDiorError(DioError e) {
     switch (e.type) {
       case DioErrorType.connectionTimeout:
-        return ServerFailure('Connection timeout with api server');
+        return ServerFailure('Connection timeout with api server ');
 
       case DioErrorType.sendTimeout:
         return ServerFailure('Send timeout with ApiServer');
@@ -34,7 +34,7 @@ class ServerFailure extends Failure {
 
   factory ServerFailure.fromResponse(int statusCode, dynamic response) {
     if (statusCode == 404) {
-      return ServerFailure('Your request was not found, please try later');
+      return ServerFailure("city not found");
     } else if (statusCode == 500) {
       return ServerFailure('There is a problem with server, please try later');
     } else if (statusCode == 400 || statusCode == 401 || statusCode == 403) {

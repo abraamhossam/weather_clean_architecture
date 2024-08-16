@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:weather_clean_arch/Features/weather/domain/entites/weather_entity.dart';
 import 'package:weather_clean_arch/constants.dart';
 
-class SuccessBody extends StatelessWidget {
-  const SuccessBody({
+class WeatherSuccessBody extends StatelessWidget {
+  const WeatherSuccessBody({
     super.key,
     required this.model,
     required this.image,
